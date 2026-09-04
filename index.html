@@ -5,26 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Formulário Místico</title>
+    <title>Formulário de Adoção de Animais</title>
 
     <style>
         /* =========================
            VARIÁVEIS DE CORES
         ========================== */
         :root {
-            --cor-principal: #6a0dad;
-            --cor-secundaria: #9c27b0;
-            --cor-destaque: #d8b4fe;
+            --cor-principal: #5F7355;
+            --cor-secundaria: #879B78;
+            --cor-destaque: #C9825B;
 
-            --cor-fundo: #f5efff;
+            --cor-fundo: #F7F3E9;
             --cor-card: #ffffff;
 
-            --cor-texto: #2d163b;
+            --cor-texto: #3D3932;
             --cor-texto-claro: #ffffff;
 
-            --cor-borda: #c4a7d7;
+            --cor-borda: #D8D1C3;
 
-            --sombra: 0 4px 15px rgba(80, 20, 120, 0.15);
+            --sombra: 0 4px 15px rgba(42, 82, 16, 0.596);
         }
 
         /* =========================
@@ -69,23 +69,23 @@
 
         nav {
             background-color: var(--cor-secundaria);
-
             padding: 15px;
             text-align: center;
         }
 
         nav a {
             color: var(--cor-texto-claro);
-
             text-decoration: none;
-
             margin: 0 15px;
-
             font-weight: bold;
+            transition: 0.5s;
         }
+    
 
         nav a:hover {
-            color: var(--cor-destaque);
+            border-radius: 5px;
+            padding: 10px;
+            background-color: var(--cor-destaque);
         }
 
         /* =========================
@@ -269,7 +269,7 @@
     <header id="inicio">
         <h1>Adoção de Pets 🐾</h1>
 
-        <p>Nesse site você encontraum formulário para entrra na lista de adoção de pets ques estão animados parater uma família!</p>
+        <p>Neste site você encontrará um formulário para entrar na lista de adoção de pets que estão esperando por uma família!</p>
     </header>
 
 
@@ -293,11 +293,11 @@
     <main>
 
         <section class="introducao">
-            <h2>Conhecendo os formulários HTML</h2>
+            <h2>Formulário de Adoção</h2>
 
             <p>
-                Nesta página podemos testar diferentes tipos de
-                campos utilizados em formulários HTML.
+                Preencha o formulário abaixo com suas informações pessoais e preferências de adoção. 
+                Certifique-se de fornecer dados precisos para que possamos entrar em contato com você.
             </p>
         </section>
 
@@ -328,6 +328,7 @@
                             id="nome"
                             name="nome"
                             placeholder="Digite seu nome"
+                            required
                         >
 
                     </div>
@@ -347,6 +348,7 @@
                             name="idade"
                             min="0"
                             max="120"
+                            required
                         >
 
                     </div>
@@ -365,8 +367,21 @@
                             id="email"
                             name="email"
                             placeholder="exemplo@email.com"
+                            required
                         >
 
+                    </div>
+
+                    <div>
+                        <label for="cpf">CPF:
+                        <input 
+                        type="text" 
+                        id="cpf" 
+                        name="cpf" 
+                        placeholder="000.000.000-00" 
+                        required
+                        >
+                        </label>
                     </div>
 
                     <!-- TEL -->
@@ -382,6 +397,7 @@
                             id="telefone"
                             name="telefone"
                             placeholder="(00) 00000-0000"
+                            required
                         >
 
                     </div>
@@ -459,285 +475,175 @@
 
                     </div>
 
+                     <!-- PORTE-->
 
-                    
+                    <div class="porte">
 
+                        <label for="porte">
+                            Porte do Animal:
+                        </label>
+
+                            <label>
+                                <div class="opcoes">
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="porte"
+                                    value="pequeno"
+                                >
+
+                                Pequeno
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="porte"
+                                    value="medio"
+                                >
+
+                                Médio
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="porte"
+                                    value="grande"
+                                >
+
+                                Grande
+                            </label>
+
+
+                    </div>
 
                     <!-- RESIDENCIA -->
 
                     <div class="campo">
 
-                        <label for="casaApe">
-                            Mora em casa ou apartamento?:
+                        <label for="residencia">
+                            Você mora em casa ou apartamento?:
                         </label>
 
-                        <label>
+                            <label>
+                                <div class="opcoes">
+
+                            <label>
                                 <input
-                                    type="checkbox"
+                                    type="radio"
                                     name="residencia"
                                     value="casa"
                                 >
 
                                 Casa
-                        </label>
-                        <label>
+                            </label>
+
+                            <label>
                                 <input
-                                    type="checkbox"
+                                    type="radio"
                                     name="residencia"
                                     value="apartamento"
                                 >
 
                                 Apartamento
-                        </label>
-
+                            </label>
                     </div>
 
-                </fieldset>
+                    <!-- OUTROS -->
+                     <div class="animais">
 
-
-                <!-- =====================
-                     ESCOLHAS
-                ====================== -->
-
-                <fieldset>
-
-                    <legend>Escolhas</legend>
-
-
-                    <!-- RADIO -->
-
-                    <div class="campo">
-
-                        <label>
-                            Turno:
+                        <label for="animais">
+                            Você tem animais de estimação?:
                         </label>
 
-                        <div class="opcoes">
+                            <label>
+                                <div class="opcoes">
 
                             <label>
                                 <input
-                                    type="checkbox"
-                                    name="turno"
-                                    value="manha"
+                                    type="radio"
+                                    name="animais"
+                                    value="sim"
                                 >
 
-                                Manhã
+                                Sim
                             </label>
-
 
                             <label>
                                 <input
-                                    type="checkbox"
-                                    name="turno"
-                                    value="tarde"
+                                    type="radio"
+                                    name="animais"
+                                    value="nao"
                                 >
 
-                                Tarde
+                                Não
                             </label>
+                    </div>
 
+
+                    <div class="ja_adotou">
+
+                        <label for="ja_adotou">
+                            Caso tenha marcado "não" na pergunta anterior, você já adotou um animal de estimação antes?:
+                        </label>
+
+                            <label>
+                                <div class="opcoes">
 
                             <label>
                                 <input
-                                    type="checkbox"
-                                    name="turno"
-                                    value="noite"
+                                    type="radio"
+                                    name="ja_adotou"
+                                    value="sim"
                                 >
 
-                                Noite
+                                Sim
                             </label>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- CHECKBOX -->
-
-                    <div class="campo">
-
-                        <label>
-                            Tecnologias que você conhece:
-                        </label>
-
-                        <div class="opcoes">
 
                             <label>
                                 <input
-                                    type="checkbox"
-                                    name="html"
+                                    type="radio"
+                                    name="ja_adotou"
+                                    value="nao"
                                 >
 
-                                HTML
+                                Não
                             </label>
+                    </div>
 
+                     <div class="motivo">
+
+                        <label for="motivo">
+                            Conte um pouco de qual foi a motivação que você teve para querer adotar um animalzinho. Vamos adorar saber:
+                        </label>
 
                             <label>
-                                <input
-                                    type="checkbox"
-                                    name="css"
-                                >
-
-                                CSS
+                                <div class="textarea">
+                                    <textarea name="motivo" id="motivo" rows="4" cols="50"></textarea>
+                                </div>
                             </label>
-
-
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="javascript"
-                                >
-
-                                JavaScript
-                            </label>
-
-                        </div>
-
                     </div>
 
-
-                    <!-- SELECT -->
-
-                    <div class="campo">
-
-                        <label for="curso">
-                            Escolha um curso:
-                        </label>
-
-                        <select
-                            id="curso"
-                            name="curso"
-                        >
-
-                            <option value="">
-                                Selecione
-                            </option>
-
-                            <option value="ds">
-                                Desenvolvimento de Sistemas
-                            </option>
-
-                            <option value="administracao">
-                                Administração
-                            </option>
-
-                            <option value="informatica">
-                                Informática
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                </fieldset>
-
-
-                <!-- =====================
-                     OUTROS CAMPOS
-                ====================== -->
-
-                <fieldset>
-
-                    <legend>Outros campos</legend>
-
-
-                    <!-- SEARCH -->
-
-                    <div class="campo">
-
-                        <label for="pesquisa">
-                            Campo de pesquisa:
-                        </label>
-
-                        <input
-                            type="search"
-                            id="pesquisa"
-                            name="pesquisa"
-                            placeholder="Pesquisar..."
-                        >
-
-                    </div>
-
-
-                    <!-- FILE -->
-
-                    <div class="campo">
-
-                        <label for="arquivo">
-                            Selecione um arquivo:
-                        </label>
-
-                        <input
-                            type="file"
-                            id="arquivo"
-                            name="arquivo"
-                        >
-
-                    </div>
-
-
-                    <!-- COLOR -->
-
-                    <div class="campo">
-
-                        <label for="cor">
-                            Escolha uma cor:
-                        </label>
-
-                        <input
-                            type="color"
-                            id="cor"
-                            name="cor"
-                            value="#6a0dad"
-                        >
-
-                    </div>
-
-
-                    <!-- RANGE -->
-
-                    <div class="campo">
-
+                    <div class="nivel">
                         <label for="nivel">
-                            Nível de satisfação:
+                            Em uma escala de 0 a 10, qual o seu nível de comprometimento com a adoção de um animalzinho?:
                         </label>
 
-                        <input
-                            type="range"
-                            id="nivel"
-                            name="nivel"
-                            min="0"
-                            max="10"
-                            value="5"
-                        >
-
+                            <label>
+                                <div class="opcoes">
+                                    <input type="range" name="nivel" id="nivel" min="0" max="10">
+                                </div>
+                            </label>
                     </div>
+                 </fieldset>
 
 
-                    <!-- TEXTAREA -->
-
-                    <div class="campo">
-
-                        <label for="mensagem">
-                            Mensagem:
-                        </label>
-
-                        <textarea
-                            id="mensagem"
-                            name="mensagem"
-                            rows="5"
-                            placeholder="Digite uma mensagem..."
-                        ></textarea>
-
-                    </div>
+                
 
 
-                    <!-- HIDDEN -->
-
-                    <input
-                        type="hidden"
-                        name="codigo"
-                        value="FORM001"
-                    >
+              
 
                 </fieldset>
 
@@ -760,7 +666,7 @@
                                 required
                             >
 
-                            Aceito os termos de uso.
+                            Antes de enviar seu formulário, clique para confirmar os termos de uso de seus dados e que está de acordo a participar de uma seleção para adoção de animais.
 
                         </label>
 
@@ -815,7 +721,7 @@
     <footer id="contato">
 
         <p>
-            Exemplo de formulário HTML
+            Exemplo de formulário HTML criado para uso de cadastro para adoção de animais de estimação.
         </p>
 
         <p>
