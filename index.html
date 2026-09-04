@@ -267,9 +267,9 @@
     ========================== -->
 
     <header id="inicio">
-        <h1>🔮 Formulário Modelo</h1>
+        <h1>Adoção de Pets 🐾</h1>
 
-        <p>Exemplo dos principais campos de formulário do HTML</p>
+        <p>Nesse site você encontraum formulário para entrra na lista de adoção de pets ques estão animados parater uma família!</p>
     </header>
 
 
@@ -320,7 +320,7 @@
                     <div class="campo">
 
                         <label for="nome">
-                            Nome:
+                            Nome completo:
                         </label>
 
                         <input
@@ -369,24 +369,6 @@
 
                     </div>
 
-
-                    <!-- PASSWORD -->
-
-                    <div class="campo">
-
-                        <label for="senha">
-                            Senha:
-                        </label>
-
-                        <input
-                            type="password"
-                            id="senha"
-                            name="senha"
-                        >
-
-                    </div>
-
-
                     <!-- TEL -->
 
                     <div class="campo">
@@ -405,116 +387,108 @@
                     </div>
 
 
-                    <!-- URL -->
-
-                    <div class="campo">
-
-                        <label for="site">
-                            Site pessoal:
-                        </label>
-
-                        <input
-                            type="url"
-                            id="site"
-                            name="site"
-                            placeholder="https://meusite.com"
-                        >
-
-                    </div>
-
                 </fieldset>
 
 
                 <!-- =====================
-                     DATA E HORÁRIO
+                     PREFERENCIAS
                 ====================== -->
 
                 <fieldset>
 
-                    <legend>Data e horário</legend>
+                    <legend>Informações de Adoção</legend>
 
-
-                    <!-- DATE -->
+                  <!-- ESPÉCIE -->
 
                     <div class="campo">
 
-                        <label for="data">
-                            Data:
+                        <label for="especie">
+                            Espécie:
                         </label>
 
-                        <input
-                            type="date"
-                            id="data"
-                            name="data"
-                        >
+                            <label>
+                                <div class="opcoes">
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="especie"
+                                    value="cachorro"
+                                >
+
+                                Cachorro
+                            </label>
+
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="especie"
+                                    value="gato"
+                                >
+
+                                Gato
+                            </label>
+
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="especie"
+                                    value="coelho"
+                                >
+
+                                Coelho
+                            </label>
+
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="especie"
+                                    value="cavalo"
+                                >
+
+                                Cavalo
+                            </label>
+            
+
+
+                        </label>
+
 
                     </div>
 
 
-                    <!-- TIME -->
+                    
+
+
+                    <!-- RESIDENCIA -->
 
                     <div class="campo">
 
-                        <label for="horario">
-                            Horário:
+                        <label for="casaApe">
+                            Mora em casa ou apartamento?:
                         </label>
 
-                        <input
-                            type="time"
-                            id="horario"
-                            name="horario"
-                        >
+                        <label>
+                                <input
+                                    type="checkbox"
+                                    name="residencia"
+                                    value="casa"
+                                >
 
-                    </div>
-
-
-                    <!-- DATETIME LOCAL -->
-
-                    <div class="campo">
-
-                        <label for="dataHorario">
-                            Data e horário:
+                                Casa
                         </label>
+                        <label>
+                                <input
+                                    type="checkbox"
+                                    name="residencia"
+                                    value="apartamento"
+                                >
 
-                        <input
-                            type="datetime-local"
-                            id="dataHorario"
-                            name="dataHorario"
-                        >
-
-                    </div>
-
-
-                    <!-- MONTH -->
-
-                    <div class="campo">
-
-                        <label for="mes">
-                            Mês:
+                                Apartamento
                         </label>
-
-                        <input
-                            type="month"
-                            id="mes"
-                            name="mes"
-                        >
-
-                    </div>
-
-
-                    <!-- WEEK -->
-
-                    <div class="campo">
-
-                        <label for="semana">
-                            Semana:
-                        </label>
-
-                        <input
-                            type="week"
-                            id="semana"
-                            name="semana"
-                        >
 
                     </div>
 
@@ -542,7 +516,7 @@
 
                             <label>
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="turno"
                                     value="manha"
                                 >
@@ -553,7 +527,7 @@
 
                             <label>
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="turno"
                                     value="tarde"
                                 >
@@ -564,7 +538,7 @@
 
                             <label>
                                 <input
-                                    type="radio"
+                                    type="checkbox"
                                     name="turno"
                                     value="noite"
                                 >
